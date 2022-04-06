@@ -1,0 +1,160 @@
+game:GetService("StarterGui"):SetCore("SendNotification",{
+    Title = "Help";
+    Text = "How To Use? Just Click On The Button Type /credits for credits type /info for infos /support for supported games! ";
+    Duration = 5;
+})
+
+local Player = game.Players.LocalPlayer
+
+Player.Chatted:connect(function(cht)
+    if cht:match("/credits") then
+game:GetService("StarterGui"):SetCore("SendNotification",{
+    Title = "Credits:";
+    Text = "Discord:invalid-user#9975 Youtube:Mr.Exploit";
+    Duration = 3.5;
+})
+    elseif cht:match("/info") then
+game:GetService("StarterGui"):SetCore("SendNotification",{
+    Title = "Information:";
+    Text = "Script Is Made For Arceus X KittenMilk And Other Weak Exploits So They Can Have Some Fun!";
+    Duration = 3.5;
+})
+    elseif cht:match("/support") then
+game:GetService("StarterGui"):SetCore("SendNotification",{
+    Title = "Supported Games:";
+    Text = "Breaking Point|Break In|Lucky Blocks BattleGround|Comming Soon!";
+    Duration = 3.5;
+})
+    end
+end)
+
+local CoastingLibrary = loadstring(game:HttpGet("https://pastebin.com/raw/3gQQtaKX"))()
+
+local ScriptTab = CoastingLibrary:CreateTab("Scripts")
+local TP = CoastingLibrary:CreateTab("Teleport")
+local Role = CoastingLibrary:CreateTab("Roles")
+local Item = CoastingLibrary:CreateTab("Give Items")
+local MainSection = ScriptTab:CreateSection("Stuffs")
+local TP = TP:CreateSection("Teleports")
+local TP2 = TP:CreateSection("Page 2")
+local Item = Item:CreateSection("Give Items")
+local Item2 = Item:CreateSection("Page2")
+local Role = Role:CreateSection("Roles")
+
+MainSection:CreateButton("Friend Cat", function()
+   local Target = game:GetService("ReplicatedStorage").RemoteEvents.Cattery;
+	Target:FireServer();
+end)
+
+MainSection:CreateButton("InstaHeal", function()
+   for i = 1, 200 do
+	    
+	        local A_1 = "Cat"
+	        local Event = game:GetService("ReplicatedStorage").RemoteEvents.Energy
+	        Event:FireServer(A_1)
+	
+	    end
+end)
+
+MainSection:CreateButton("Kill Villains", function()
+     for i,v in pairs(game.Workspace.BadGuys:GetChildren()) do
+	
+	        for i = 1, 50 do
+	
+	            game:GetService("ReplicatedStorage").RemoteEvents.HitBadguy:FireServer(v,10)
+	            game:GetService("ReplicatedStorage").RemoteEvents.HitBadguy:FireServer(v,996)
+	            game:GetService("ReplicatedStorage").RemoteEvents.HitBadguy:FireServer(v,9)
+	            game:GetService("ReplicatedStorage").RemoteEvents.HitBadguy:FireServer(v,996)
+	
+	        end
+	
+	        end
+end)
+
+MainSection:CreateButton("Open Vault", function()
+   if workspace:findFirstChild("CodeNote") then
+	game.ReplicatedStorage.RemoteEvents.Safe:FireServer(workspace.CodeNote.SurfaceGui.TextLabel.Text)
+	end
+end)
+
+TP:CreateButton("House", function()
+   game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-36, 3, -200)
+end)
+
+TP:CreateButton("Basement", function()
+   game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(71, -15, -163)
+end)
+
+TP:CreateButton("Attic", function()
+   game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-16, 35, -220)
+end)
+
+TP:CreateButton("Store", function()
+   game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-422, 3, -121)
+end)
+
+TP:CreateButton("Sewer", function()
+   game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(129, 3, -125)
+end)
+
+TP2:CreateButton("ScaryLary Room", function()
+   game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-39, -287, -1480)
+end)
+
+Role:CreateButton("Swat Role", function()
+   local A_1 = "SwatGun"
+local A_2 = true
+local Event = game:GetService("ReplicatedStorage").RemoteEvents.OutsideRole
+Event:FireServer(A_1, A_2)
+end)
+
+Role:CreateButton("Police Role", function()
+   local A_1 = "Gun"
+local A_2 = true
+local Event = game:GetService("ReplicatedStorage").RemoteEvents.OutsideRole
+Event:FireServer(A_1, A_2)
+end)
+
+Item:CreateButton("BloxyCola", function()
+   game.ReplicatedStorage.RemoteEvents.GiveTool:FireServer("BloxyCola")
+end)
+
+Item:CreateButton("Lollipop", function()
+   game.ReplicatedStorage.RemoteEvents.GiveTool:FireServer("Lollipop")
+end)
+
+Item:CreateButton("MedKit", function()
+   game.ReplicatedStorage.RemoteEvents.GiveTool:FireServer("MedKit")
+end)
+
+Item:CreateButton("Chips", function()
+   game.ReplicatedStorage.RemoteEvents.GiveTool:FireServer("Chips")
+end)
+
+Item:CreateButton("Cookies", function()
+   game.ReplicatedStorage.RemoteEvents.GiveTool:FireServer("Cookie")
+end)
+
+Item:CreateButton("Teddy", function()
+   game.ReplicatedStorage.RemoteEvents.GiveTool:FireServer("TeddyBloxpin")
+end)
+
+Item2:CreateButton("Pizza", function()
+   game.ReplicatedStorage.RemoteEvents.GiveTool:FireServer("Pizza")
+end)
+
+Item2:CreateButton("Plank", function()
+   game.ReplicatedStorage.RemoteEvents.GiveTool:FireServer("Plank")
+end)
+
+Item2:CreateButton("LinkedSword", function()
+   game.ReplicatedStorage.RemoteEvents.GiveTool:FireServer("LinkedSword")
+end)
+
+Item2:CreateButton("Cure", function()
+   game.ReplicatedStorage.RemoteEvents.GiveTool:FireServer("Cure")
+end)
+
+Item2:CreateButton("Bat", function()
+   game.ReplicatedStorage.RemoteEvents.GiveTool:FireServer("Bat")
+end)
